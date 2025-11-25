@@ -1,0 +1,291 @@
+ubuntu@mcp-project-nbodies:~/project$ nvcc -O3 nbodies.cu -o nbodies -lm -ccbin g++-10
+ubuntu@mcp-project-nbodies:~/project$ ./nbodies
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=1, threads=6, shm=168 bytes, n_bodies=6, steps=150000
+Elapsed time (kernel+copy):                 2224961.5 micros
+Elapsed time (allocation + kernel + copy): 2225121.2 micros
+
+launch config: blocks=1, threads=32, shm=896 bytes, n_bodies=6, steps=150000
+Elapsed time (kernel+copy):                 5407928.5 micros
+Elapsed time (allocation + kernel + copy): 5408151.5 micros
+
+launch config: blocks=1, threads=64, shm=1792 bytes, n_bodies=6, steps=150000
+Elapsed time (kernel+copy):                 9358853.0 micros
+Elapsed time (allocation + kernel + copy): 9359041.0 micros
+
+launch config: blocks=1, threads=32, shm=896 bytes, n_bodies=32, steps=150000
+Elapsed time (kernel+copy):                 5640631.0 micros
+Elapsed time (allocation + kernel + copy): 5640958.5 micros
+
+launch config: blocks=1, threads=64, shm=1792 bytes, n_bodies=32, steps=150000
+Elapsed time (kernel+copy):                 9608399.0 micros
+Elapsed time (allocation + kernel + copy): 9608714.0 micros
+
+launch config: blocks=2, threads=32, shm=896 bytes, n_bodies=64, steps=150000
+Elapsed time (kernel+copy):                 9884906.0 micros
+Elapsed time (allocation + kernel + copy): 9885397.0 micros
+
+launch config: blocks=1, threads=64, shm=1792 bytes, n_bodies=64, steps=150000
+Elapsed time (kernel+copy):                 10638241.0 micros
+Elapsed time (allocation + kernel + copy): 10638758.0 micros
+
+launch config: blocks=4, threads=32, shm=896 bytes, n_bodies=128, steps=150000
+Elapsed time (kernel+copy):                 18630342.0 micros
+Elapsed time (allocation + kernel + copy): 18631188.0 micros
+
+launch config: blocks=2, threads=64, shm=1792 bytes, n_bodies=128, steps=150000
+Elapsed time (kernel+copy):                 19745220.0 micros
+Elapsed time (allocation + kernel + copy): 19746126.0 micros
+
+launch config: blocks=1, threads=128, shm=3584 bytes, n_bodies=128, steps=150000
+Elapsed time (kernel+copy):                 29302412.0 micros
+Elapsed time (allocation + kernel + copy): 29303228.0 micros
+
+launch config: blocks=8, threads=32, shm=896 bytes, n_bodies=256, steps=150000
+Elapsed time (kernel+copy):                 35767132.0 micros
+Elapsed time (allocation + kernel + copy): 35768632.0 micros
+
+launch config: blocks=4, threads=64, shm=1792 bytes, n_bodies=256, steps=150000
+Elapsed time (kernel+copy):                 38490792.0 micros
+Elapsed time (allocation + kernel + copy): 38492356.0 micros
+
+launch config: blocks=2, threads=128, shm=3584 bytes, n_bodies=256, steps=150000
+Elapsed time (kernel+copy):                 56934240.0 micros
+Elapsed time (allocation + kernel + copy): 56935716.0 micros
+
+launch config: blocks=1, threads=256, shm=7168 bytes, n_bodies=256, steps=150000
+Elapsed time (kernel+copy):                 110720664.0 micros
+Elapsed time (allocation + kernel + copy): 110722184.0 micros
+
+launch config: blocks=16, threads=32, shm=896 bytes, n_bodies=512, steps=150000
+Elapsed time (kernel+copy):                 70215008.0 micros
+Elapsed time (allocation + kernel + copy): 70217800.0 micros
+
+launch config: blocks=8, threads=64, shm=1792 bytes, n_bodies=512, steps=150000
+Elapsed time (kernel+copy):                 75446216.0 micros
+Elapsed time (allocation + kernel + copy): 75449024.0 micros
+
+launch config: blocks=4, threads=128, shm=3584 bytes, n_bodies=512, steps=150000
+Elapsed time (kernel+copy):                 113490432.0 micros
+Elapsed time (allocation + kernel + copy): 113493392.0 micros
+
+launch config: blocks=2, threads=256, shm=7168 bytes, n_bodies=512, steps=150000
+Elapsed time (kernel+copy):                 219547440.0 micros
+Elapsed time (allocation + kernel + copy): 219550288.0 micros
+
+launch config: blocks=1, threads=512, shm=14336 bytes, n_bodies=512, steps=150000
+Elapsed time (kernel+copy):                 437053888.0 micros
+Elapsed time (allocation + kernel + copy): 437056896.0 micros
+
+=== n_bodies=1024, thr_per_b=32, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=32, threads=32, shm=896 bytes, n_bodies=1024, steps=150000
+Elapsed time (kernel+copy):                 139052336.0 micros
+Elapsed time (allocation + kernel + copy): 139058352.0 micros
+
+=== n_bodies=1024, thr_per_b=64, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=16, threads=64, shm=1792 bytes, n_bodies=1024, steps=150000
+Elapsed time (kernel+copy):                 149359168.0 micros
+Elapsed time (allocation + kernel + copy): 149364784.0 micros
+
+=== n_bodies=1024, thr_per_b=128, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=8, threads=128, shm=3584 bytes, n_bodies=1024, steps=150000
+Elapsed time (kernel+copy):                 225654320.0 micros
+Elapsed time (allocation + kernel + copy): 225660384.0 micros
+
+=== n_bodies=1024, thr_per_b=256, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=4, threads=256, shm=7168 bytes, n_bodies=1024, steps=150000
+Elapsed time (kernel+copy):                 439288352.0 micros
+Elapsed time (allocation + kernel + copy): 439294176.0 micros
+
+=== n_bodies=1024, thr_per_b=512, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=2, threads=512, shm=14336 bytes, n_bodies=1024, steps=150000
+Elapsed time (kernel+copy):                 878845312.0 micros
+Elapsed time (allocation + kernel + copy): 878851264.0 micros
+
+=== n_bodies=1024, thr_per_b=1024, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=1, threads=1024, shm=28672 bytes, n_bodies=1024, steps=150000
+Elapsed time (kernel+copy):                 1747054592.0 micros
+Elapsed time (allocation + kernel + copy): 1747060352.0 micros
+
+=== n_bodies=2048, thr_per_b=32, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=64, threads=32, shm=896 bytes, n_bodies=2048, steps=150000
+Elapsed time (kernel+copy):                 301778816.0 micros
+Elapsed time (allocation + kernel + copy): 301790016.0 micros
+
+=== n_bodies=2048, thr_per_b=64, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=32, threads=64, shm=1792 bytes, n_bodies=2048, steps=150000
+Elapsed time (kernel+copy):                 297481664.0 micros
+Elapsed time (allocation + kernel + copy): 297492672.0 micros
+
+=== n_bodies=4096, thr_per_b=32, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=128, threads=32, shm=896 bytes, n_bodies=4096, steps=150000
+Elapsed time (kernel+copy):                 903720832.0 micros
+Elapsed time (allocation + kernel + copy): 903740928.0 micros
+
+=== n_bodies=4096, thr_per_b=64, steps=150000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=64, threads=64, shm=1792 bytes, n_bodies=4096, steps=150000
+Elapsed time (kernel+copy):                 905731968.0 micros
+Elapsed time (allocation + kernel + copy): 905752768.0 micros
+
+=== n_bodies=6, thr_per_b=32, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=1, threads=32, shm=896 bytes, n_bodies=6, steps=1500000
+Elapsed time (kernel+copy):                 53935200.0 micros
+Elapsed time (allocation + kernel + copy): 53935460.0 micros
+
+=== n_bodies=6, thr_per_b=64, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=1, threads=64, shm=1792 bytes, n_bodies=6, steps=1500000
+Elapsed time (kernel+copy):                 93869384.0 micros
+Elapsed time (allocation + kernel + copy): 93869584.0 micros
+
+=== n_bodies=32, thr_per_b=32, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=1, threads=32, shm=896 bytes, n_bodies=32, steps=1500000
+Elapsed time (kernel+copy):                 56317200.0 micros
+Elapsed time (allocation + kernel + copy): 56317540.0 micros
+
+=== n_bodies=32, thr_per_b=64, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=1, threads=64, shm=1792 bytes, n_bodies=32, steps=1500000
+Elapsed time (kernel+copy):                 96409816.0 micros
+Elapsed time (allocation + kernel + copy): 96410144.0 micros
+
+=== n_bodies=64, thr_per_b=32, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=2, threads=32, shm=896 bytes, n_bodies=64, steps=1500000
+Elapsed time (kernel+copy):                 99571384.0 micros
+Elapsed time (allocation + kernel + copy): 99571936.0 micros
+
+=== n_bodies=64, thr_per_b=64, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=1, threads=64, shm=1792 bytes, n_bodies=64, steps=1500000
+Elapsed time (kernel+copy):                 106633520.0 micros
+Elapsed time (allocation + kernel + copy): 106634032.0 micros
+
+=== n_bodies=128, thr_per_b=32, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=4, threads=32, shm=896 bytes, n_bodies=128, steps=1500000
+Elapsed time (kernel+copy):                 185015024.0 micros
+Elapsed time (allocation + kernel + copy): 185015904.0 micros
+
+=== n_bodies=128, thr_per_b=64, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=2, threads=64, shm=1792 bytes, n_bodies=128, steps=1500000
+Elapsed time (kernel+copy):                 199318320.0 micros
+Elapsed time (allocation + kernel + copy): 199319232.0 micros
+
+=== n_bodies=256, thr_per_b=32, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=8, threads=32, shm=896 bytes, n_bodies=256, steps=1500000
+Elapsed time (kernel+copy):                 357119936.0 micros
+Elapsed time (allocation + kernel + copy): 357121568.0 micros
+
+=== n_bodies=256, thr_per_b=64, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=4, threads=64, shm=1792 bytes, n_bodies=256, steps=1500000
+Elapsed time (kernel+copy):                 384149376.0 micros
+Elapsed time (allocation + kernel + copy): 384151008.0 micros
+
+=== n_bodies=512, thr_per_b=32, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=16, threads=32, shm=896 bytes, n_bodies=512, steps=1500000
+Elapsed time (kernel+copy):                 701134912.0 micros
+Elapsed time (allocation + kernel + copy): 701137792.0 micros
+
+=== n_bodies=512, thr_per_b=64, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=8, threads=64, shm=1792 bytes, n_bodies=512, steps=1500000
+Elapsed time (kernel+copy):                 754865408.0 micros
+Elapsed time (allocation + kernel + copy): 754868288.0 micros
+
+=== n_bodies=1024, thr_per_b=32, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=32, threads=32, shm=896 bytes, n_bodies=1024, steps=1500000
+Elapsed time (kernel+copy):                 1391138560.0 micros
+Elapsed time (allocation + kernel + copy): 1391144448.0 micros
+
+=== n_bodies=1024, thr_per_b=64, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=16, threads=64, shm=1792 bytes, n_bodies=1024, steps=1500000
+Elapsed time (kernel+copy):                 1494264576.0 micros
+Elapsed time (allocation + kernel + copy): 1494270208.0 micros
+
+
+=== n_bodies=2048, thr_per_b=32, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=64, threads=32, shm=896 bytes, n_bodies=2048, steps=1500000
+Elapsed time (kernel+copy):                 3018181376.0 micros
+Elapsed time (allocation + kernel + copy): 3018192640.0 micros
+
+=== n_bodies=2048, thr_per_b=64, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=32, threads=64, shm=1792 bytes, n_bodies=2048, steps=1500000
+Elapsed time (kernel+copy):                 2973863680.0 micros
+Elapsed time (allocation + kernel + copy): 2973874944.0 micros
+
+=== n_bodies=4096, thr_per_b=32, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=128, threads=32, shm=896 bytes, n_bodies=4096, steps=1500000
+Elapsed time (kernel+copy):                 9039090688.0 micros
+Elapsed time (allocation + kernel + copy): 9039113216.0 micros
+
+=== n_bodies=4096, thr_per_b=64, steps=1500000 ===
+GPU: Tesla T4, maxThreadsPerBlock=1024, sharedMemPerBlock=49152
+launch config: blocks=64, threads=64, shm=1792 bytes, n_bodies=4096, steps=1500000
+Elapsed time (kernel+copy):                 9055525888.0 micros
+Elapsed time (allocation + kernel + copy): 9055548416.0 micros
+
+
++++++++++++SERIAL_150K    CPU  NO BOUNDARY CONDITIONS++++++++++++++++++++
+ubuntu@mcp-project-nbodies:~/project$ ./serial     
+execution time: 0.192838931 s 				  6
+ubuntu@mcp-project-nbodies:~/project$ gcc serial_no_pc.c -lm -O3 -o serial
+ubuntu@mcp-project-nbodies:~/project$ ./serial            8
+execution time: 0.208601738 s
+ubuntu@mcp-project-nbodies:~/project$ gcc serial_no_pc.c -lm -O3 -o serial
+ubuntu@mcp-project-nbodies:~/project$ ./serial            16
+execution time: 0.372836921 s
+ubuntu@mcp-project-nbodies:~/project$ gcc serial_no_pc.c -lm -O3 -o serial
+ubuntu@mcp-project-nbodies:~/project$ ./serial            32
+execution time: 1.159331966 s
+ubuntu@mcp-project-nbodies:~/project$ gcc serial_no_pc.c -lm -O3 -o serial
+ubuntu@mcp-project-nbodies:~/project$ ./serial             64
+execution time: 4.344072076 s
+ubuntu@mcp-project-nbodies:~/project$ gcc serial_no_pc.c -lm -O3 -o serial
+ubuntu@mcp-project-nbodies:~/project$ ./serial           128
+execution time: 19.042863668 s
+ubuntu@mcp-project-nbodies:~/project$ gcc serial_no_pc.c -lm -O3 -o serial
+ubuntu@mcp-project-nbodies:~/project$ ./serial          256
+execution time: 82.229132551 s
+ubuntu@mcp-project-nbodies:~/project$ ./serial
+execution time: 333.080025856 s                         512 bodies
+ubuntu@mcp-project-nbodies:~/project$ ./serial
+execution time: 1337.166668701 s                        1024 bodies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
